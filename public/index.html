@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>ac_app</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?key=fb0f7179dfe9485a104e556b4173a7bc&v=1.4.4&plugin=AMap.Geolocation,AMap.Autocomplete,AMap.PlaceSearch,AMap.PolyEditor,AMap.CircleEditor"></script>
+    <script src='http://static.ydbimg.com/API/YdbOnline.js'></script>
+
+  </head>
+  <script>
+        window.onload=function(){
+            resize(750,"x");
+        }
+        function resize(originSize,type){
+            // originSize = 750;
+            // type = x
+            type = type || "x";
+            if(type=="x"){
+                var width = document.documentElement.clientWidth;//设备的宽度
+                var scale = width/originSize*100+"px";
+                document.getElementsByTagName("html")[0].style.fontSize=scale;
+            }else if(type=="y"){
+                var height = document.documentElement.clientHeight;
+                var scale = height/originSize+"px";
+                document.getElementsByTagName("html")[0].style.fontSize=scale;
+            }
+        }
+        resize(750,"x");
+
+        window.onresize = function(){
+            resize(750,"x");
+        }
+        
+        function DoWithScan(outValue) {
+	        		if (outValue.indexOf("http") < 0) {
+	            		console.log("扫描结果：" + outValue);
+					}else {
+						window.location.href = outValue;
+					}
+	 
+	    		}
+    </script>
+  <body>
+    <noscript>
+      <strong>We're sorry but ac_app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

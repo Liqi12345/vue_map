@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size:0.2rem;
+}
+button{
+    border: 0;
+    outline: none;
+}
+.search{
+    position: absolute;
+    right: 0.2rem;
+    display: flex;
+    align-items: center;}
+.search span{
+    font-size: 0.26rem;
+    color: #00D2F8;
+}
+.icon-chenggongbiaoqing1{
+    color: #1296db;
+    font-size: 0.7rem !important;
+}
+.icon-shibaibiaoqing{
+    color: #d81e06;
+    font-size: 0.7rem !important;
+}
+header .search img{
+    width: 0.4rem !important;
+    height: 0.4rem !important;
+}
+.search >ul{
+    position: absolute;
+    top: 100%;
+    z-index: 99;
+    background:#11546b;
+    width: auto;
+    right: 0;}
+.search li{
+    line-height: 0.5rem;
+    font-size: 0.26rem;
+    color: #000;
+    text-align: center;
+    white-space:nowrap;
+    padding: 0 0.1rem;
+
+}
+
+input{
+    background-color:transparent;
+    border: none;
+    outline: none;
+}
+#app,body,html,#home,#test_data,#test_system,#project,#equipment-select,#login{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #071225;
+    font-family:MicrosoftYaHei;
+    position: relative;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+a{
+    color: #000;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+li{
+    list-style:none;
+}
+input{
+    display: block;
+    outline: none;
+    border: none;
+    background: none;
+}
